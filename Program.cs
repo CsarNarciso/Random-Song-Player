@@ -3,7 +3,7 @@ using System.Threading;
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
-class Test
+class RandomSongPlayer
 {
 
 	private static int foundSongs = 0;
@@ -37,34 +37,40 @@ class Test
 			using (var waveOut = new WaveOutEvent())
 			{
 				var resampler = new WdlResamplingSampleProvider(reader.ToSampleProvider(), reader.WaveFormat.SampleRate);
+
+				// Get total duration
+				TimeSpan totalDuration = reader.TotalTime;
 				
+				// Generate a random start position (avoid last few seconds to prevent instant stop)
+				double randomStartSeconds = rnd.NextDouble() * (totalDuration.TotalSeconds - 15); // 5 sec buffer
+				reader.CurrentTime = TimeSpan.FromSeconds(randomStartSeconds);
+
 				// Set playback
 				waveOut.Init(resampler);
-				
-				//Play sound
 				waveOut.Play();
-				
-				//And wait to finish
-				while(waveOut.PlaybackState == PlaybackState.Playing)
+
+				// Play the song with volume fade
+				while (waveOut.PlaybackState == PlaybackState.Playing)
 				{
-					//Change volume
+					// Change volume
 					volume = (increaseVolume) ? Math.Min(1.0f, volume + changeVolumeSpeedFactor) : Math.Max(0.0f, volume - changeVolumeSpeedFactor);
 					waveOut.Volume = Math.Min(1.0f, volume);
-					
-					if(volume >= 1.0f)
+
+					if (volume >= 1.0f)
 					{
 						increaseVolume = false;
 					}
-					else if(volume <= 0.0f)
+					else if (volume <= 0.0f)
 					{
 						increaseVolume = true;
 						waveOut.Stop();
 					}
-					
+
 					Console.Clear();
 					Console.WriteLine($"Found {foundSongs} songs");
 					Console.WriteLine($"Playing {path}");
-					Console.WriteLine($"Enjoy!!");
+					Console.WriteLine($"Started at {reader.CurrentTime}");
+					Console.WriteLine("Enjoy!!");
 				}
 			}
 		}
@@ -73,6 +79,7 @@ class Test
 			Console.WriteLine("Error: " + ex.Message);
 		}
 	}
+
 	
 	static string getRandomSongFilePath(string dirPath)
 	{
