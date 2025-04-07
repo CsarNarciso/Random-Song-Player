@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\worker\\Desktop\\Test\\Test.csproj": {}
+    "C:\\Users\\worker\\Desktop\\C\\Development\\Cs\\Random Song Player\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\worker\\Desktop\\Test\\Test.csproj": {
+    "C:\\Users\\worker\\Desktop\\C\\Development\\Cs\\Random Song Player\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\worker\\Desktop\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\worker\\Desktop\\C\\Development\\Cs\\Random Song Player\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\worker\\Desktop\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\worker\\Desktop\\C\\Development\\Cs\\Random Song Player\\Test.csproj",
         "packagesPath": "C:\\Users\\worker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\worker\\Desktop\\Test\\obj\\",
+        "outputPath": "C:\\Users\\worker\\Desktop\\C\\Development\\Cs\\Random Song Player\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\worker\\AppData\\Roaming\\NuGet\\NuGet.Config"
