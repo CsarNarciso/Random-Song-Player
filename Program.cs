@@ -123,8 +123,11 @@ class RandomSongPlayer
 			//If not, 
 			else
 			{
-				//Directly dequeue sounds in straight sequence to avoid repeat an already played sound
-				lastPlayedSongs.Dequeue();
+				if(lastPlayedSongs.Count >= files.Length)
+				{
+					//Directly dequeue sounds in straight sequence to avoid repeat an already played sound
+					lastPlayedSongs.Dequeue();
+				}
 			}
 			
 			return selectedSong;
