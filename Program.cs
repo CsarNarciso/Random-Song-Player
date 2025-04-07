@@ -111,8 +111,19 @@ class RandomSongPlayer
 			
 			lastPlayedSongs.Enqueue(selectedSong);
 			
-			if(lastPlayedSongs.Count >= files.Length / 2)
+			//Dequeue last played sound when already played at least 6 sounds
+			if(lastPlayedSongs.Count >= 6)
 			{
+				//And played at least the half of all the current dir found sounds
+				if(lastPlayedSongs.Count >= files.Length / 2)
+				{
+					lastPlayedSongs.Dequeue();
+				}
+			}
+			//If not, 
+			else
+			{
+				//Directly dequeue sounds in straight sequence to avoid repeat an already played sound
 				lastPlayedSongs.Dequeue();
 			}
 			
