@@ -66,9 +66,12 @@ class RandomSongPlayer
 						waveOut.Stop();
 					}
 
+					FileInfo fileInfo = new FileInfo(path);
+					string songFileName = fileInfo.Name;
+
 					Console.Clear();
 					Console.WriteLine($"Found {foundSongs} songs");
-					Console.WriteLine($"Playing {path}");
+					Console.WriteLine($"Playing {songFileName}");
 					Console.WriteLine($"Started at {reader.CurrentTime}");
 					Console.WriteLine("Enjoy!!");
 				}

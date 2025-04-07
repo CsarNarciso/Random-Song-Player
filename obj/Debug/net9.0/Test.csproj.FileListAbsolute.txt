@@ -28,3 +28,17 @@ C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\obj\Debug\net9.0\Tes
 C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\obj\Debug\net9.0\Test.dll
 C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\obj\Debug\net9.0\refint\Test.dll
 C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\obj\Debug\net9.0\Test.pdb
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\Test.exe
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\Test.deps.json
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\Test.runtimeconfig.json
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\Test.dll
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\Test.pdb
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\NAudio.dll
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\NAudio.Asio.dll
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\NAudio.Core.dll
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\NAudio.Midi.dll
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\NAudio.Wasapi.dll
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\bin\Debug\net9.0\NAudio.WinMM.dll
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\obj\Debug\net9.0\Test.csproj.Up2Date
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\obj\Debug\net9.0\Test.genruntimeconfig.cache
+C:\Users\worker\Desktop\C\Development\Cs\Random Song Player\obj\Debug\net9.0\ref\Test.dll
