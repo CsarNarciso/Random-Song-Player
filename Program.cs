@@ -48,6 +48,18 @@ class RandomSongPlayer
 				// Set playback
 				waveOut.Init(resampler);
 				waveOut.Play();
+				
+				
+				//Display in console file info
+				FileInfo fileInfo = new FileInfo(path);
+				string songFileName = fileInfo.Name;
+				
+				Console.Clear();
+				Console.WriteLine($"Found {foundSongs} songs");
+				Console.WriteLine($"Playing {songFileName}");
+				Console.WriteLine($"Started at {reader.CurrentTime}");
+				Console.WriteLine("Enjoy!!");
+
 
 				// Play the song with volume fade
 				while (waveOut.PlaybackState == PlaybackState.Playing)
@@ -65,15 +77,6 @@ class RandomSongPlayer
 						increaseVolume = true;
 						waveOut.Stop();
 					}
-
-					FileInfo fileInfo = new FileInfo(path);
-					string songFileName = fileInfo.Name;
-
-					Console.Clear();
-					Console.WriteLine($"Found {foundSongs} songs");
-					Console.WriteLine($"Playing {songFileName}");
-					Console.WriteLine($"Started at {reader.CurrentTime}");
-					Console.WriteLine("Enjoy!!");
 				}
 			}
 		}
